@@ -15,6 +15,9 @@ public class Main{
         }
         System.out.println(sb);
 
+        String str = "abcdef";
+        String result = utils.upperAndPrefix(utils.addSuffix(str));
+        System.out.println("\n" + result);
     }
 }
 
