@@ -6,7 +6,9 @@ public class Main{
         System.out.println("\nDebugging and Unit Testing in Java");
         System.out.println("===================================");
 
+        // Create object of StringUtilities class
         StringUtilities utils = new StringUtilities();
+
         StringBuilder sb = new StringBuilder();
         while (sb.length() < 10 ){
             utils.addChar(sb, 'a');
