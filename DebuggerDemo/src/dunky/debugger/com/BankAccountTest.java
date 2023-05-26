@@ -13,15 +13,20 @@ public class BankAccountTest {
         BankAccount account = new BankAccount("Duncan", "Geoffrey Opiyo", 1000.0);
         double balance = account.deposit(300.0, true);
         assertEquals(1300.0, balance, 0);
-        assertEquals(1300, account.getBalance(), 0);
     }
 
     @org.junit.Test
     public void withdraw() {
+        BankAccount account = new BankAccount("Duncan", "Geoffrey Opiyo", 1000.0);
+        account.withdraw(800.0, true);
+        assertEquals(200, account.getBalance(), 0);
     }
 
     @org.junit.Test
     public void getBalance() {
+        BankAccount account = new BankAccount("Duncan", "Geoffrey Opiyo", 1000.0);
+        account.deposit(300.0, true);
+        assertEquals(1300, account.getBalance(), 0);
     }
 
     @org.junit.Test
