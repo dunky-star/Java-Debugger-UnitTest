@@ -28,11 +28,11 @@ public class Utilities {
      * to each other, by removing one occurrence of the character.
      * "ABBCDEEF" -> "ABCDEF"
      * "ABCBDEEF" -> "ABCBDEF" (the two B's aren't next to each other, so they
-     * aren't removed. */
+     * aren't removed.) */
     public String removePairs(String source) {
 
         // If length is less than  2, there won't be any pairs
-        if (source == null || source.length() <2) {
+        if (source == null || source.length() < 2) {
             return source;
         }
 

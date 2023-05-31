@@ -1,5 +1,8 @@
+import com.dunky.junit.Utilities;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        Utilities util = new Utilities();
+        util.removePairs("AABCDDEFF");
     }
 }
