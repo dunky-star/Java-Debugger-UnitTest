@@ -10,7 +10,7 @@ public class BankAccountTest {
      private BankAccount account;
     @org.junit.Before
     public void setup(){
-        account = new BankAccount("Duncan", "Geoffrey Opiyo", 1500.0, BankAccount.SAVINGS);
+        account = new BankAccount("Duncan", "Geoffrey Opiyo", 1000.0, BankAccount.SAVINGS);
         System.out.println("Running a test...");
     }
 
@@ -21,9 +21,15 @@ public class BankAccountTest {
     }
 
     @org.junit.Test
-    public void withdraw() {
-        double balance = account.withdraw(800.0, true);
-        assertEquals(700, balance, 0);
+    public void withdrawBranch() {
+        double balance = account.withdraw(600.0, true);
+        assertEquals(400, balance, 0);
+    }
+
+    @org.junit.Test
+    public void withdrawNotBranch() {
+        double balance = account.withdraw(600.0, false);
+        assertEquals(400, balance, 0);
     }
 
     @org.junit.Test
